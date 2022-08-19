@@ -37,6 +37,6 @@ jobs:
       #     mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
       #     cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
       - name: Run tests
-        run: xcodebuild clean test -project "Calculator.xcodeproj" -scheme "Calculator" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+        run: xcodebuild clean test -project "Calculator.xcworkspace" -scheme "Calculator" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
       - name: Build App
-        run: xcodebuild -project "Calculator.xcodeproj" -scheme "Calculator" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
+        run: xcodebuild -project "Calculator.xcworkspace" -scheme "Calculator" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
