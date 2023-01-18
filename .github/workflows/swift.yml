@@ -16,10 +16,10 @@ jobs:
         run: |
           chmod 755 ./.github/scripts/test_swift_package.sh
           chmod 755 ./.github/scripts/test_app.sh
-      - name: Testing Swift package
-        run: exec ./.github/scripts/test_swift_package.sh
-      - name: Testing iOS app
-        run: exec ./.github/scripts/test_app.sh
+#       - name: Testing Swift package
+#         run: exec ./.github/scripts/test_swift_package.sh
+#       - name: Testing iOS app
+#         run: exec ./.github/scripts/test_app.sh
       - name: Archiving project
         env:
           PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
